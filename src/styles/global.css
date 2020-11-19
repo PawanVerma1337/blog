@@ -1,0 +1,49 @@
+:root {
+    --primary: #141414;
+    --accent: #588dde;
+    --secondary: #99aab5;
+    --accent2: #e6e6e9ff;
+    --text: #fef6f3;
+}
+
+body {
+    font-family: 'Poppins';
+    padding: 0;
+    margin: 0;
+    background-color: var(--primary);
+    color: var(--text);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat';
+}
+
+a {
+    color: var(--accent);
+}
+
+a:hover {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.btn-custom{
+    color: var(--secondary);
+    background-color: var(--primary);
+    border: 1px solid var(--accent2) !important;
+    border-radius:0;
+    transition: background-color 1s ease;
+}
+.btn-custom:hover {
+    background-color: var(--accent);
+}
+
+.container {
+    width: 66%;
+}
+
+@media only screen and (max-width: 720px) {
+    .container {
+        width: 95%;
+    }
+}
