@@ -5,8 +5,12 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [
+    siteMetadata: {
+        title: `Pawan Verma's Blog`,
+        description: `A blog to share all the experiences that i had solving problems related to computer science and life.`,
+        author: `Pawan Verma`,
+    },
+    plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,6 +28,18 @@ module.exports = {
           ], display: 'swap'       
       }
     },
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Pawan Verma's Blog`,
+        short_name: `Pawan's Blog`,
+        start_url: `/`,
+        background_color: `#141414`,
+        theme_color: `#99aab5`,
+        display: `standalone`,
+        icon : `/static/favicon.ico`
+      },
+    },
   ],
 }

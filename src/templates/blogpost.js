@@ -1,11 +1,13 @@
 import React from 'react'
 import {Helmet} from "react-helmet"
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 export default function BlogPost({ data }) {
     const { markdownRemark } = data
     return (
         <Layout>
+            <SEO title={markdownRemark.frontmatter.title} description={markdownRemark.excerpt} />
             <Helmet>
                 <title>{markdownRemark.frontmatter.title}</title> 
             </Helmet>
@@ -26,6 +28,7 @@ export const pageQuery = graphql`
         slug
         title
       }
+      excerpt
     }
   }
 `
